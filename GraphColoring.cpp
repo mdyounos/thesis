@@ -7,7 +7,7 @@ const int POPULATION_SIZE = 50;
 const int MAX_GENERATIONS = 100;
 const double MUTATION_RATE = 0.2;
 
-class GraphColoringGeneticAlgorithm {
+class GCGA {
 private:
     int vertices;
     vector<vector<int>> adjacencyMatrix;
@@ -17,13 +17,15 @@ private:
         vector<int> genes;
         int fitness;
 
-        Chromosome() : fitness(0) {}
+        Chromosome(){
+            fitness = 0;
+        }
     };
 
     vector<Chromosome> population;
 
 public:
-    GraphColoringGeneticAlgorithm(int v): vertices(v) {
+    GCGA(int v): vertices(v) {
     adjacencyMatrix.resize(vertices, vector<int>(vertices, 0));
 };
 
@@ -41,7 +43,7 @@ public:
 };
 
 
-void GraphColoringGeneticAlgorithm::initializePopulation() {
+void GCGA::initializePopulation() {
     //change its size automatically
     population.resize(POPULATION_SIZE);
 
@@ -56,7 +58,7 @@ void GraphColoringGeneticAlgorithm::initializePopulation() {
     }
 }
 
-void GraphColoringGeneticAlgorithm::calculateFitness(Chromosome &chromosome) {
+void GCGA::calculateFitness(Chromosome &chromosome) {
     chromosome.fitness = 0;
 
     for (int i = 0; i < vertices; ++i) {
@@ -69,7 +71,7 @@ void GraphColoringGeneticAlgorithm::calculateFitness(Chromosome &chromosome) {
     }
 }
 
-void GraphColoringGeneticAlgorithm::crossover() {
+void GCGA::crossover() {
     // Perform one-point crossover
     for (int i = 0; i < POPULATION_SIZE; i += 2) {
         int crossoverPoint = rand() % vertices;
@@ -83,7 +85,7 @@ void GraphColoringGeneticAlgorithm::crossover() {
     }
 }
 
-void GraphColoringGeneticAlgorithm::mutate(Chromosome &chromosome) {
+void GCGA::mutate(Chromosome &chromosome) {
     // Perform mutation with a certain probability for each gene
     for (int i = 0; i < vertices; ++i) {
         if ((rand() / static_cast<double>(RAND_MAX)) < MUTATION_RATE) {
@@ -94,7 +96,7 @@ void GraphColoringGeneticAlgorithm::mutate(Chromosome &chromosome) {
     calculateFitness(chromosome);
 }
 
-void GraphColoringGeneticAlgorithm::evolve() {
+void GCGA::evolve() {
     for (int generation = 0; generation < MAX_GENERATIONS; ++generation) {
         // Sort the population based on fitness
         sort(population.begin(), population.end(), [](const Chromosome &a, const Chromosome &b) {
@@ -113,7 +115,7 @@ void GraphColoringGeneticAlgorithm::evolve() {
     }
 }
 
-void GraphColoringGeneticAlgorithm::printSolution(const Chromosome &chromosome) {
+void GCGA::printSolution(const Chromosome &chromosome) {
     cout << "Vertex\tColor\n";
     for (int i = 0; i < vertices; ++i) {
         cout << i << "\t" << chromosome.genes[i] << endl;
@@ -125,7 +127,7 @@ int main() {
     srand(static_cast<int>(time(nullptr)));
 
     // Example usage
-    GraphColoringGeneticAlgorithm graph(5);
+    GCGA graph(5);
     graph.addEdge(0, 1);
     graph.addEdge(0, 2);
     graph.addEdge(1, 2);

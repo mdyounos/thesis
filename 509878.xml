@@ -1,0 +1,1543 @@
+<article xsi:noNamespaceSchemaLocation="http://jats.nlm.nih.gov/publishing/1.1/xsd/JATS-journalpublishing1-mathml3.xsd" dtd-version="1.1" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">IJAP</journal-id>
+      <journal-title-group>
+        <journal-title>International Journal of Antennas and Propagation</journal-title></journal-title-group>
+      <issn pub-type="epub">1687-5877</issn>
+      <issn pub-type="ppub">1687-5869</issn>
+      <publisher>
+        <publisher-name>Hindawi Publishing Corporation</publisher-name></publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="other">509878</article-id>
+      <article-id pub-id-type="doi">10.1155/2013/509878</article-id>
+      <article-id pub-id-type="publisher-id">509878</article-id>
+      <article-categories>
+        <subj-group subj-group-type="heading">
+          <subject>Research Article</subject></subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>A New Technique of Removing Blind Spots to Optimize Wireless Coverage in Indoor Area</article-title></title-group>
+      <contrib-group>
+        <contrib contrib-type="author" id="U54894327" corresp="yes">
+          <name>
+            <surname>Reza</surname>
+            <given-names>A. W.</given-names></name>
+          
+          <xref ref-type="aff" rid="I1">
+            <sup>1</sup></xref>
+        </contrib>
+        <contrib contrib-type="author" id="U59428058">
+          <name>
+            <surname>Dimyati</surname>
+            <given-names>K.</given-names></name>
+          <xref ref-type="aff" rid="I2">
+            <sup>2</sup></xref>
+        </contrib>
+        <contrib contrib-type="author" id="U40843683">
+          <name>
+            <surname>Noordin</surname>
+            <given-names>K. A.</given-names></name>
+          <xref ref-type="aff" rid="I1">
+            <sup>1</sup></xref>
+        </contrib>
+        <contrib contrib-type="author" id="U70109383">
+          <name>
+            <surname>Islam</surname>
+            <given-names>M. J.</given-names></name>
+          <xref ref-type="aff" rid="I1">
+            <sup>1</sup></xref>
+        </contrib>
+        <contrib contrib-type="author" id="U18915402">
+          <name>
+            <surname>Sarker</surname>
+            <given-names>M. S.</given-names></name>
+          <xref ref-type="aff" rid="I1">
+            <sup>1</sup></xref>
+        </contrib>
+        <contrib contrib-type="author" id="U97013028">
+          <name>
+            <surname>Ramiah</surname>
+            <given-names>H.</given-names></name>
+          <xref ref-type="aff" rid="I1">
+            <sup>1</sup></xref>
+        </contrib>
+        <contrib contrib-type="Academic Editor" id="U67598481">
+          <name>
+            <surname>Selleri</surname>
+            <given-names>Stefano</given-names></name>
+        </contrib></contrib-group>
+      <aff id="I1">
+        <sup>1</sup>
+        <addr-line>Department of Electrical Engineering</addr-line>
+        <addr-line>Faculty of Engineering</addr-line>
+        <addr-line>University of Malaya</addr-line>
+        <addr-line>50603 Kuala Lumpur</addr-line>
+        <country>Malaysia</country>
+        <ext-link ext-link-type="domain-name">um.edu.my</ext-link></aff>
+      <aff id="I2">
+        <sup>2</sup>
+        <addr-line>Department of Electrical and Electronic Engineering</addr-line>
+        <addr-line>Faculty of Engineering</addr-line>
+        <addr-line>National Defence University of Malaysia</addr-line>
+        <addr-line>57000 Kuala Lumpur</addr-line>
+        <country>Malaysia</country>
+        <ext-link ext-link-type="domain-name">upnm.edu.my</ext-link></aff>
+      <pub-date pub-type="publication-year">
+        <year>2013</year></pub-date>
+      <pub-date pub-type="archival-date">
+        <day>18</day>
+        <month>4</month>
+        <year>2013</year></pub-date>
+      <volume>2013</volume>
+      <history>
+        <date date-type="received">
+          <day>06</day>
+          <month>12</month>
+          <year>2012</year></date>
+        <date date-type="rev-recd">
+          <day>14</day>
+          <month>02</month>
+          <year>2013</year></date>
+        <date date-type="accepted">
+          <day>27</day>
+          <month>03</month>
+          <year>2013</year></date>
+      </history>
+      <permissions>
+        <copyright-year>2013</copyright-year>
+        <copyright-holder>Copyright &#xa9; 2013 A. W. Reza et al.</copyright-holder>
+        <license xlink:href="http://creativecommons.org/licenses/by/4.0/">
+          <license-p>This is an open access article distributed under the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p></license>
+      </permissions>
+      <abstract>
+        <p>Blind spots (or bad sampling points) in indoor areas are the positions where no signal exists (or the signal is too weak) and the existence of a receiver within the blind spot decelerates the performance of the communication system. Therefore, it is one of the fundamental requirements to eliminate the blind spots from the indoor area and obtain the maximum coverage while designing the wireless networks. In this regard, this paper combines ray-tracing (RT), genetic algorithm (GA), depth first search (DFS), and branch-and-bound method as a new technique that guarantees the removal of blind spots and subsequently determines the optimal wireless coverage using minimum number of transmitters. The proposed system outperforms the existing techniques in terms of algorithmic complexity and demonstrates that the computation time can be reduced as high as 99&#x25; and 75&#x25;, respectively, as compared to existing algorithms. Moreover, in terms of experimental analysis, the coverage prediction successfully reaches 99&#x25; and, thus, the proposed coverage model effectively guarantees the removal of blind spots.</p></abstract>
+      <counts>
+        <ref-count count="19" />
+        <page-count count="10" /></counts></article-meta>
+  </front>
+  <body>
+    <sec id="sec1">
+      <title>1. Introduction </title>
+      <p>Recent trend shows that it is one of the greatest challenges to remove the blind spots from the user-specified environment as well as install the optimal communication system while designing the wireless networks. Blind spot [<xref ref-type="bibr" rid="B1">1</xref>] refers to that position where signal cannot be reached or too weak to be considered as a significant signal, which affects the overall performance of the communication system. There are not many existing methods [<xref ref-type="bibr" rid="B2">2</xref>, <xref ref-type="bibr" rid="B3">3</xref>] available in the area of radio signal propagation prediction to optimize the indoor wireless coverage. In [<xref ref-type="bibr" rid="B2">2</xref>], a recent coverage prediction model using ray-tracing (RT) technique for field prediction, associated with genetic algorithm (GA) to optimize the base station antenna location in an indoor environment, is presented. The model is based on the image method and, thus, computational time is increased with the number of objects in the indoor environment. On the other hand, GA is used to find the location of optimal antenna that maximizes the signal strength calculated over the region of interest. The GA starts with a set of solutions, known as population, and solutions from a population are used to generate a new population. The solutions that will generate a new population are selected based on their fitness function. This procedure is repeated until a certain condition is satisfied. If the condition is not attained, genetic operators are applied to form a new population. The generation of new population completely depends on the linear combination of variables of each point in the optimization space in a certain generation. Therefore, implementation of this type of coverage prediction model is very troublesome and also computationally inefficient. Conversely, Yun&#x2019;s algorithm [<xref ref-type="bibr" rid="B3">3</xref>] also consists of GA and RT to determine the minimum number of transmitting antennas as well as their appropriate locations to provide the optimized wireless coverage for indoor environment and according to Yun et al. [<xref ref-type="bibr" rid="B3">3</xref>], all existing coverage models failed to guarantee the optimum wireless coverage by completely eliminating blind spots from the indoor environment. However, it may be impractical to simulate the complex environments using Yun&#x2019;s algorithm [<xref ref-type="bibr" rid="B3">3</xref>] due to expensive computational complexity that would sometimes be beyond the capacity of the contemporary computers.</p>
+      <p>Therefore, the main research objectives are illustrated as follows: (i) to determine the best location of transmitter to provide the optimum network deployment, (ii) to determine the number of transmitters required to ensure optimal coverage, and (iii) to remove the blind spots from indoor as well as obtain the maximum wireless coverage using the minimum number of transmitters while designing the wireless networks (i.e., to find a solution where the number of transmitters is minimum and all the receivers are covered by those transmitters, which means no receiver or blind spot will exist in the indoor). To address the current challenges and prime concerns as discussed, this study exploits both RT [<xref ref-type="bibr" rid="B4">4</xref>&#x2013;<xref ref-type="bibr" rid="B11">11</xref>] and GA [<xref ref-type="bibr" rid="B12">12</xref>&#x2013;<xref ref-type="bibr" rid="B16">16</xref>] together with depth first search (DFS) [<xref ref-type="bibr" rid="B17">17</xref>] (the DFS is a last in first out searching in terms of live nodes where list of live nodes forms a stack) and branch-and-bound method as a new technique that guarantees the removal of blind spots and subsequently determines the optimal wireless coverage. The RT is used here to follow the trajectory from the transmitter to the receiver. For detailed explanations of RT model, we may refer to [<xref ref-type="bibr" rid="B6">6</xref>]. In GA, each chromosome is represented by a binary pattern that keeps the coverage information of a transmitter. By recombination of some patterns, it finds the optimal solution. The DFS is used to search those transmitters that are required to cover all the receivers (a generated node whose child nodes have not yet been explored is called live node and the node which is being explored is called E-node [<xref ref-type="bibr" rid="B12">12</xref>]). While searching, the recombination theory of GA is applied to the coverage pattern of the transmitters. And, branch-and-bound method is a backtracking procedure [<xref ref-type="bibr" rid="B12">12</xref>], where bounding functions are applied to avoid the generation of subtrees (to avoid unnecessary searching, thus making the algorithm faster) that have no answer node. In contrast to [<xref ref-type="bibr" rid="B12">12</xref>], the proposed algorithm consumed less memory requirement as it stores only a stack of nodes representing a single path. If any solution is found without exploring unnecessary nodes based on the bounding functions, both space and time complexities can be reduced further. The superiority of the proposed system will be verified in the subsequent discussions.</p>
+      <p />
+      <p />
+      <p />
+      <p />
+      <p /></sec>
+    <sec id="sec2">
+      <title>2. Proposed Coverage Algorithm</title>
+      <p>The working principle of the proposed algorithm based on the DFS is as follows. <list><list-item><label>(i)</label><p>Explore the root to generate its child.</p></list-item><list-item><label>(ii)</label><p>Visit the child nodes and follow on with the child of them and so on until a leaf node is found. </p></list-item><list-item><label>(iii)</label><p>Step back to the second child of the previous root, and so on. </p></list-item></list></p>
+      <p>For simplicity, the following notations are being used in the subsequent discussions. <list><list-item><label>(i)</label><p>If the number of sampling points is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M1"><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M2"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> is the <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M3"><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:math></inline-formula>th transmitter where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M4"><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>i</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>n</mml:mi></mml:math></inline-formula>. </p></list-item><list-item><label>(ii)</label><p>The coverage pattern of a transmitter <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M5"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M6"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>. </p></list-item><list-item><label>(iii)</label><p>The number of good and bad sampling points of a coverage pattern is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M7"><mml:mi>N</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M8"><mml:mi>N</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>b</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math></inline-formula>, respectively. </p></list-item><list-item><label>(iv)</label><p>Let <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M9"><mml:mrow><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> be the edge that is connected with the root and immediate child of the root node. The edge <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M10"><mml:mrow><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> has a real-valued weight <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M11"><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:msubsup><mml:mo stretchy="false">&#x2211;</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mo>&#x2223;</mml:mo></mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:math></inline-formula>, where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M12"><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>j</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math></inline-formula> is the <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M13"><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:math></inline-formula>th bit of coverage pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M14"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>. Each node also has a weight of <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M15"><mml:mrow><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>. The weight of the root node is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M16"><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mn mathvariant="normal">0</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">0</mml:mn></mml:mrow></mml:msub></mml:math></inline-formula>, the weight of the child node at level 1 is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M17"><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub></mml:math></inline-formula>, and the child node at level 2 along the same path has the weight of <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M18"><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub></mml:math></inline-formula>. Therefore, the weight of each node can be expressed as <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M19"><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>i</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:msub><mml:mo stretchy="false">&#x2211;</mml:mo><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>i</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>d</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>-</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>w</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow></mml:math></inline-formula>, where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M20"><mml:mrow><mml:mi>d</mml:mi></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M21"><mml:mrow><mml:mi>w</mml:mi></mml:mrow></mml:math></inline-formula> represent the depth and the weight of an edge of the tree, respectively.</p></list-item></list></p>
+      <p>In this study, the coverage information of a transmitter is described by a chromosome, which consists of a coverage pattern. The coverage pattern works as follows. Assume that an indoor area where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M22"><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula> sampling points are covered by <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M23"><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:math></inline-formula> transmitters <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M24"><mml:mi>T</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false">{</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mo>&#x2026;</mml:mo><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">}</mml:mo></mml:math></inline-formula>, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M25"><mml:mi>k</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>n</mml:mi></mml:math></inline-formula>. Here, each transmitter <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M26"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> has a coverage pattern like <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M27"><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mo stretchy="false">{</mml:mo><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mo>&#x2026;</mml:mo><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">}</mml:mo></mml:math></inline-formula>, where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M28"><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>i</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>k</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M29"><mml:mrow><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> = &#x201c;0&#x201d; or &#x201c;1&#x201d; for <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M30"><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>j</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>n</mml:mi></mml:math></inline-formula>. The value <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M31"><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:math></inline-formula> indicates the <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M32"><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:math></inline-formula>th sampling point as a good sampling point, which is covered by the <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M33"><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:math></inline-formula>th transmitter and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M34"><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0</mml:mn></mml:math></inline-formula> specifies that <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M35"><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:math></inline-formula>th sampling point is a blind spot. Again, two patterns <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M36"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M37"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> can generate the resultant pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M38"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> based on union operation as follows:
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M39"><mml:mtable><mml:mlabeledtr id="EEq1"><mml:mtd><mml:mtext>(1)</mml:mtext></mml:mtd><mml:mtd><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo class="left">{</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>&#x222a;</mml:mo><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mrow><mml:mo>&#x2223;</mml:mo></mml:mrow><mml:mrow><mml:msubsup><mml:mo stretchy="false">&#x2211;</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup><mml:mrow><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow><mml:mo>&#x2265;</mml:mo><mml:mn mathvariant="normal">0</mml:mn></mml:mrow><mml:mo class="right">}</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula></p>
+      <p>In the best case, the resultant coverage pattern is
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M40"><mml:mtable><mml:mlabeledtr id="EEq2"><mml:mtd><mml:mtext>(2)</mml:mtext></mml:mtd><mml:mtd><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo class="left">{</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>&#x222a;</mml:mo><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>&#x222a;</mml:mo><mml:mo>&#x22ef;</mml:mo><mml:mo>&#x222a;</mml:mo><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:mo>&#x2223;</mml:mo></mml:mrow><mml:mrow><mml:msubsup><mml:mo stretchy="false">&#x2211;</mml:mo><mml:mrow><mml:mi>j</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msubsup><mml:mrow><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow></mml:mrow><mml:mo class="right">}</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>n</mml:mi><mml:mo>,</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+					where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M41"><mml:msub><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:math></inline-formula> that makes summation value equal to <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M42"><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula>, which indicates 100&#x25; coverage. Thus, if the set of unique coverage patterns is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M43"><mml:mi>p</mml:mi><mml:mo>=</mml:mo><mml:mo stretchy="false">{</mml:mo><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mo>&#x2026;</mml:mo><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">}</mml:mo></mml:math></inline-formula>, the purpose is to find a subset <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M44"><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub><mml:mo>&#x2286;</mml:mo><mml:mi>p</mml:mi></mml:math></inline-formula>, where the number of covered sampling points is
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M45"><mml:mtable><mml:mlabeledtr id="EEq3"><mml:mtd><mml:mtext>(3)</mml:mtext></mml:mtd><mml:mtd><mml:mrow><mml:mo class="left">|</mml:mo><mml:mrow><mml:munder><mml:mrow><mml:mo>&#x22c3;</mml:mo></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x2208;</mml:mo><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:munder><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo class="right">|</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>n</mml:mi><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula></p>
+      <p>For illustration, suppose there are 8 sampling points in an indoor area. If two transmitters <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M46"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>x</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M47"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> cover the sampling points 1, 3, 5, 8 and 2, 3, 4, respectively, their coverage patterns (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M48"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>x</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M49"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>y</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>) and the resultant pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M50"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> are as shown in Table <xref ref-type="table" rid="tab1">1</xref>.</p>
+      <table-wrap id="tab1">
+        <label>Table 1</label>
+        <table>
+          <thead>
+            <tr>
+              <th align="left">&#x2009;</th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M51">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">1</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M52">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">2</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M53">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">3</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M54">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">4</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M55">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">5</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M56">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">6</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M57">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">7</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M58">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">8</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M59">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mi>x</mml:mi></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">1</td></tr>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M60">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mi>y</mml:mi></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">0</td></tr>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M61">
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>p</mml:mi></mml:mrow>
+                      <mml:mrow>
+                        <mml:mi>r</mml:mi></mml:mrow>
+                    </mml:msub>
+                    <mml:mi />
+                    <mml:mo>=</mml:mo>
+                    <mml:mi />
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>p</mml:mi></mml:mrow>
+                      <mml:mrow>
+                        <mml:mi>x</mml:mi></mml:mrow>
+                    </mml:msub>
+                    <mml:mo>&#x222a;</mml:mo>
+                    <mml:mi />
+                    <mml:msub>
+                      <mml:mrow>
+                        <mml:mi>p</mml:mi></mml:mrow>
+                      <mml:mrow>
+                        <mml:mi>y</mml:mi></mml:mrow>
+                    </mml:msub>
+                    <mml:mi /></mml:math></inline-formula>
+              </td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">1</td></tr>
+          </tbody></table>
+      </table-wrap>
+      <p>Here, the resultant pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M62"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> is created based on logical &#x201c;OR&#x201d; operation (where the result is &#x201c;1&#x201d;, if either first or second bit is &#x201c;1&#x201d; or both bits are &#x201c;1;&#x201d; otherwise, the result is &#x201c;0&#x201d;). The resultant pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M63"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> consists of six good sampling points (1, 2, 3, 4, 5, and 8) and two blind spots (6 and 7).</p>
+      <p>Figure <xref ref-type="fig" rid="fig1">1</xref> also gives some ideas on good sampling points and blind spots, where 40 receivers have been deployed. In Figure <xref ref-type="fig" rid="fig1a">1(a)</xref>, an area surrounded by the dotted pentagon has been chosen as the transmitter position. Here, 21 receivers (small filled circles) receive the signals from the transmitter and other 19 receivers (small filled circles surrounded by the triangle) do not receive any signal. The blue lines are the emanated rays from the transmitter, while the red lines represent the specular reflections and transmissions of waves between the objects (obstacles). Therefore, in case of a single transmitter in Figure <xref ref-type="fig" rid="fig1a">1(a)</xref>, 21 good sampling points and 19 blind spots are found. Similarly, while using two transmitters in Figure <xref ref-type="fig" rid="fig1b">1(b)</xref>, still there exist 6 blind spots. And, finally for Figure <xref ref-type="fig" rid="fig1c">1(c)</xref>, where 3 transmitters are being used, there is no blind spot available that indicates that the optimal coverage for indoor wireless has been achieved and those three transmitting positions (surrounded by the dotted pentagon) are considered as at their optimized locations.</p>
+      <fig-group id="fig1">
+        <caption>
+          <p>Blind spots (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M64"><mml:mrow><mml:mi mathvariant="normal">&#x394;</mml:mi></mml:mrow></mml:math></inline-formula>) identification and elimination from 40 sampling points deployed in an indoor environment.</p>
+        </caption>
+        <fig id="fig1a">
+          <label>(a)</label>
+          <caption>
+            <p>19 blind spots (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M65"><mml:mrow><mml:mi mathvariant="normal">&#x394;</mml:mi></mml:mrow></mml:math></inline-formula>)</p>
+          </caption>
+          <graphic xlink:href="509878.fig.001a" /></fig>
+        <fig id="fig1b">
+          <label>(b)</label>
+          <caption>
+            <p>6 blind spots (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M66"><mml:mrow><mml:mi mathvariant="normal">&#x394;</mml:mi></mml:mrow></mml:math></inline-formula>) </p>
+          </caption>
+          <graphic xlink:href="509878.fig.001b" /></fig>
+        <fig id="fig1c">
+          <label>(c)</label>
+          <caption>
+            <p>No blind spot </p></caption>
+          <graphic xlink:href="509878.fig.001c" /></fig></fig-group>
+      <p>In this study, the DFS uses branch-and-bound terminology while exploring the search tree. For the indoor environment having <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M67"><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula> number of sampling points, the proposed bounding functions are as follows.<list><list-item><label>(i)</label><p>If the set of transmitters representing the path to the E-node is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M68"><mml:mo stretchy="false">{</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mo>&#x2026;</mml:mo><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">}</mml:mo></mml:math></inline-formula>, then the set of child nodes with parent-child labeling <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M69"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M70"><mml:mo stretchy="false">{</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mo>&#x2026;</mml:mo><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo stretchy="false">}</mml:mo></mml:math></inline-formula>, where the coverage pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M71"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> is not covered by the resultant pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M72"><mml:mrow><mml:msub><mml:mo stretchy="false">&#x22c3;</mml:mo><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>j</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow></mml:math></inline-formula>, that is, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M73"><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>&#x2284;</mml:mo><mml:mrow><mml:msub><mml:mo stretchy="false">&#x22c3;</mml:mo><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>j</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow></mml:math></inline-formula>.</p></list-item><list-item><label>(ii)</label><p>The number of blind spots in the resulting pattern generated from the set of transmitters until the path of the E-node is less than or equal to the summation of the good sampling points of the subsequent coverage patterns that correspond to the subtree of the root <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M74"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>, that is, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M75"><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mrow><mml:mi>N</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>b</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x2009;</mml:mo><mml:mo>&#x2009;</mml:mo><mml:mtext>in</mml:mtext><mml:mo>&#x2009;</mml:mo><mml:mo>&#x2009;</mml:mo><mml:mrow><mml:msub><mml:mo stretchy="false">&#x22c3;</mml:mo><mml:mrow><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>j</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow></mml:mrow><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mo>&#x2264;</mml:mo><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mrow><mml:mi>N</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>g</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x2009;</mml:mo><mml:mo>&#x2009;</mml:mo><mml:mtext>in</mml:mtext><mml:mo>&#x2009;</mml:mo><mml:mo>&#x2009;</mml:mo><mml:mrow><mml:msub><mml:mo stretchy="false">&#x22c3;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>+</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>j</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mrow></mml:mrow><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:math></inline-formula>.</p></list-item><list-item><label>(iii)</label><p>The new node will be generated from the current E-node, if the weight <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M76"><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>i</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math></inline-formula> (where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M77"><mml:mn mathvariant="normal">0</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mi>i</mml:mi><mml:mo>&#x2264;</mml:mo><mml:mi>d</mml:mi></mml:math></inline-formula>) of the current E-node at level <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M78"><mml:mrow><mml:mi>d</mml:mi></mml:mrow></mml:math></inline-formula> is less than or equal to the number of sampling points <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M79"><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula>.</p></list-item></list></p>
+      <p>Consider a floor plan of a building with six sampling points as presented in [<xref ref-type="bibr" rid="B3">3</xref>]. It is assumed that the transmitters are placed to the slight left of the sampling points by an arbitrary distance of 36&#x2009;cm [<xref ref-type="bibr" rid="B3">3</xref>]. The reason behind this is if the positions of the transmitter and receiver are identical, then the proposed algorithm will skip the corresponding sampling point while calculating the received power as both positions of transmitter and sampling points are overlapped. Now, the ray tracer for each of the six sampling positions is executed to calculate the field distribution among sampling points and the generated coverage patterns (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M80"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>&#x2013;<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M81"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>) of those six transmitters (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M82"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>&#x2013;<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M83"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>) are in Table <xref ref-type="table" rid="tab2">2</xref>. Here, each row is a coverage pattern and each binary value in the column refers to a sampling point as good or blind spot for the corresponding transmitter.</p>
+      <table-wrap id="tab2">
+        <label>Table 2</label>
+        <caption>
+          <p>Coverage pattern of transmitters (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M84"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn fontstyle="italic">1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> to <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M85"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn fontstyle="italic">6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>) in the matrix form.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="left">&#x2009;</th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M86">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">1</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M87">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">2</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M88">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">3</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M89">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">4</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M90">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">5</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th>
+              <th align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M91">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>e</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">6</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M92">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">1</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">0</td></tr>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M93">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">2</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">0</td></tr>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M94">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">3</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">0</td></tr>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M95">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">4</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">0</td></tr>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M96">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">5</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">1</td>
+              <td align="center">0</td>
+              <td align="center">1</td>
+              <td align="center">0</td></tr>
+            <tr>
+              <td align="left">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M97">
+                    <mml:mrow>
+                      <mml:msub>
+                        <mml:mrow>
+                          <mml:mi>p</mml:mi></mml:mrow>
+                        <mml:mrow>
+                          <mml:mn fontstyle="italic">6</mml:mn></mml:mrow>
+                      </mml:msub></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">0</td>
+              <td align="center">1</td></tr>
+          </tbody></table>
+      </table-wrap>
+      <p>From Table <xref ref-type="table" rid="tab2">2</xref>, the cost functions of the coverage patterns (<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M98"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> to <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M99"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>) are 3, 3, 3, 4, 3, and 5, respectively. Here, the cost function (effectiveness) of a coverage pattern is calculated based on the blind spots; that is, the lower the number of blind spots, the higher the effectiveness. It is noticed that both <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M100"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M101"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>5</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> are the same (i.e., the sampling points covered by <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M102"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>5</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> have already been covered by <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M103"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>). Hence, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M104"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>5</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> is ignored marking it as a duplicate pattern. Thus, the proposed algorithm continues with 5 patterns except <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M105"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>5</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> to select an optimal subset of them.</p>
+      <p>Figure <xref ref-type="fig" rid="fig2">2</xref> generates a DFS tree using those 5 transmitters to achieve the optimal coverage. The edge between two nodes represents a transmitter. According to the proposed algorithm, the exploration of a node is suspended as soon as a new unexplored node is generated. Then, the exploration of the new node is immediately begun.</p>
+      <fig id="fig2">
+        <label>Figure 2</label>
+        <caption>
+          <p>The DFS tree generated by the proposed algorithm.</p></caption>
+        <graphic xlink:href="509878.fig.002" /></fig>
+      <p>The algorithm starts from the root node 1 at level 0, which indicates no transmitter in the area. The root is explored and its first child node 2 is the next E-node of level 1, where the coverage algorithm is based on single transmitter. Node 2 generates its first child 3 at level 2, which is expanded as usual to generate nodes 4 and 5 at level 3. However, it cannot be generated because of the third bounding function because the weight of each node at level 3 is greater than the sum of the number of sampling points, that is, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M106"><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mn mathvariant="normal">3</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x3e;</mml:mo><mml:mi>n</mml:mi></mml:math></inline-formula>. As the node 3 is a leaf node, the algorithm switches back to its parent node 2. The second child node 4 of node 2 is generated and the algorithm switches to the second level again. Children of node 4 should be transmitters <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M107"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M108"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>, respectively, but they cannot be generated because of first, second, and third bounding functions, respectively. The set of transmitters that consists of the path to the E-node 4 is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M109"><mml:mo stretchy="false">{</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub><mml:mo stretchy="false">}</mml:mo></mml:math></inline-formula>, the resultant coverage pattern of which is as follows:<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M110"><mml:mtable><mml:mlabeledtr id="eq4"><mml:mtd><mml:mtext>(4)</mml:mtext></mml:mtd><mml:mtd><mml:semantics><mml:image xlink:href="509878.fig.009" /></mml:semantics></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula></p>
+      <p>The pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M111"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> covers the pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M112"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> that violates the first bounding function. The pattern <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M113"><mml:mrow><mml:msub><mml:mrow><mml:mi>p</mml:mi></mml:mrow><mml:mrow><mml:mi>r</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> has 2 blind spots. The set of transmitters that forms the sub-tree of root <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M114"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M115"><mml:mo stretchy="false">{</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">6</mml:mn></mml:mrow></mml:msub><mml:mo stretchy="false">}</mml:mo></mml:math></inline-formula>. Therefore, according to the second boundary function:
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M116"><mml:mtable><mml:mlabeledtr id="EEq4"><mml:mtd><mml:mtext>(5)</mml:mtext></mml:mtd><mml:mtd><mml:mi>N</mml:mi><mml:mrow><mml:mo class="left">(</mml:mo><mml:mi>b</mml:mi><mml:mo class="right">)</mml:mo></mml:mrow><mml:mo>&#x2009;</mml:mo><mml:mtext>in</mml:mtext><mml:mo>&#x2009;</mml:mo><mml:mrow><mml:mo class="left">{</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub><mml:mo class="right">}</mml:mo></mml:mrow><mml:mo>&#x2264;</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo class="left">(</mml:mo><mml:mi>g</mml:mi><mml:mo class="right">)</mml:mo></mml:mrow><mml:mo>&#x2009;</mml:mo><mml:mtext>in</mml:mtext><mml:mo>&#x2009;</mml:mo><mml:mrow><mml:mo class="left">{</mml:mo><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">6</mml:mn></mml:mrow></mml:msub><mml:mo class="right">}</mml:mo></mml:mrow><mml:mo>&#x27f9;</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mo>&#x2264;</mml:mo><mml:mn mathvariant="normal">1</mml:mn><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula></p>
+      <p>As the condition of (<xref ref-type="disp-formula" rid="EEq4">5</xref>) is wrong, the algorithm will not generate the child node of <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M117"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>. And, if the node 5 is intended to add, the weight of the node 5 at level 3 exceeds the sum of the number of sampling points, that is, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M118"><mml:msub><mml:mrow><mml:mi>W</mml:mi></mml:mrow><mml:mrow><mml:mtext>node</mml:mtext></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mn mathvariant="normal">3</mml:mn><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x3e;</mml:mo><mml:mi>n</mml:mi></mml:math></inline-formula>, which violates the third bounding function. Hence, it prevents the generation of node 5. If the algorithm continues, the tree in Figure <xref ref-type="fig" rid="fig2">2</xref> will be constructed, where the cross (X) marked node of <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M119"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>5</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula> has duplicate coverage pattern. In Figure <xref ref-type="fig" rid="fig2">2</xref>, the optimal coverage is formed by the transmitters {<inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M120"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M121"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M122"><mml:mrow><mml:msub><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>6</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:math></inline-formula>} and the solution path consists of the nodes 1, 6, 8, and 9, respectively. </p>
+      <p>Figure <xref ref-type="fig" rid="fig3">3</xref> shows some sample simulations with different numbers of sampling points generated by the proposed coverage algorithm. Here, the small filled solid circles represent the sampling points Rx (receiving points), the solid circles in hollow circles represent the optimized positions of the transmitters Tx that cover all the sampling points from those positions as well as eliminate all the blind spots, and the rectangles are the objects (working as obstacles).</p>
+      <fig-group id="fig3">
+        <caption>
+          <p>The floor plan of the indoor propagation area and the locations of the sampling points where the optimized positions of the transmitters are surrounded by the solid circles in hollow circles. </p></caption>
+        <fig id="fig3a">
+          <label>(a)</label>
+          <caption>
+            <p>20 sampling points covered by 2 transmitters</p></caption>
+          <graphic xlink:href="509878.fig.003a" /></fig>
+        <fig id="fig3b">
+          <label>(b)</label>
+          <caption>
+            <p>40 sampling points covered by 3 transmitters</p></caption>
+          <graphic xlink:href="509878.fig.003b" /></fig></fig-group>
+    </sec>
+    <sec id="sec3">
+      <title>3. Results and Discussion</title>
+      <p>In this section, both time and space complexities of the proposed algorithm will be derived and compared with the existing Algorithms 1 and 2, as reported in [<xref ref-type="bibr" rid="B3">3</xref>, <xref ref-type="bibr" rid="B12">12</xref>], respectively. Both time and space complexities of the existing Algorithm 1 reported in [<xref ref-type="bibr" rid="B3">3</xref>] were derived in [<xref ref-type="bibr" rid="B12">12</xref>] and it was observed that both time and space complexities were as the same as follows:
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M123"><mml:mtable><mml:mlabeledtr id="EEq5"><mml:mtd><mml:mtext>(6)</mml:mtext></mml:mtd><mml:mtd><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msup><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+					Here, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M124"><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula> represents the number of sampling points. As the time complexity depends on the number of nodes generated or expanded until the required solution has been found, the time complexity of the existing Algorithm 2 can be expressed as follows by modifying (<xref ref-type="disp-formula" rid="EEq5">6</xref>):
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M125"><mml:mtable><mml:mlabeledtr id="EEq6"><mml:mtd><mml:mtext>(7)</mml:mtext></mml:mtd><mml:mtd><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mi>k</mml:mi><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+					Here, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M126"><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M127"><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:math></inline-formula> are the number of rejected coverage patterns and unexplored nodes. </p>
+      <p>In [<xref ref-type="bibr" rid="B12">12</xref>], it is already proven that the time complexity is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M128"><mml:mi>O</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mi>k</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math></inline-formula> according to the bounding function where BFS (breadth first search) algorithm is used. On the other hand, this paper is an enhanced version of our existing work, and hence, we can express the time complexity of DFS algorithm which is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M129"><mml:mi>O</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mi>k</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math></inline-formula> as well, because the time complexity of DFS is generally the same as BFS. However, in the proposed method, we have used new bounding functions and some criteria to limit the search space tree. According to the third bounding function, the solution must be found within the path length <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M130"><mml:mrow><mml:mo stretchy="false">&#x230A;</mml:mo><mml:mrow><mml:mtext>lo</mml:mtext><mml:msub><mml:mrow><mml:mtext>g</mml:mtext></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mi>n</mml:mi></mml:mrow><mml:mo stretchy="false">&#x230B;</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:math></inline-formula> for the proposed algorithm. Therefore, the improved time complexity of the proposed method is obtained as follows by replacing <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M131"><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:math></inline-formula> value with <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M132"><mml:mrow><mml:mo stretchy="false">&#x230A;</mml:mo><mml:mrow><mml:mtext>lo</mml:mtext><mml:msub><mml:mrow><mml:mtext>g</mml:mtext></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mi>n</mml:mi></mml:mrow><mml:mo stretchy="false">&#x230B;</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:math></inline-formula>:
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M133"><mml:mtable><mml:mlabeledtr id="EEq7"><mml:mtd><mml:mtext>(8)</mml:mtext></mml:mtd><mml:mtd><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mo minsize="0.75em" maxsize="0.75em">&#x230A;</mml:mo><mml:mrow><mml:mtext>lo</mml:mtext><mml:msub><mml:mrow><mml:mtext>g</mml:mtext></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mi>n</mml:mi></mml:mrow><mml:mo minsize="0.75em" maxsize="0.75em">&#x230B;</mml:mo><mml:mo>+</mml:mo><mml:mn mathvariant="normal">2</mml:mn><mml:mo>-</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mi>k</mml:mi><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+					As the only single path from the root to a leaf node is stored in memory stack, the space complexity of the proposed algorithm can be expressed as
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M134"><mml:mtable><mml:mlabeledtr id="EEq8"><mml:mtd><mml:mtext>(9)</mml:mtext></mml:mtd><mml:mtd><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi><mml:mo>-</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup><mml:mo>,</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula>
+					where <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M135"><mml:mrow><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> is the number of nodes unexplored in a single path. The proposed algorithm will be compared with the existing Algorithm 1 [<xref ref-type="bibr" rid="B3">3</xref>] and the existing Algorithm 2 [<xref ref-type="bibr" rid="B12">12</xref>], as presented in Table <xref ref-type="table" rid="tab3">3</xref>. Based on this table, it can be deduced that the time complexity of the proposed algorithm is much better than the existing Algorithms 1 and 2 (the time complexity of both existing algorithms is increasing exponentially while it remains almost constant for the proposed algorithm). This is further demonstrated in Figure <xref ref-type="fig" rid="fig4">4</xref>. In this figure, the values of <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M136"><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M137"><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:math></inline-formula> are randomly assigned to 1 and 2, respectively. That is, it has been considered that the number of rejected duplicate patterns is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M138"><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math></inline-formula> and the number of unexplored nodes is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M139"><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:math></inline-formula>. According to Figure <xref ref-type="fig" rid="fig4">4</xref>, as the value of <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M140"><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M141"><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:math></inline-formula> increases, the complexity difference rises which indicates better performance of the proposed algorithm. In addition, Figure <xref ref-type="fig" rid="fig5">5</xref> and Table <xref ref-type="table" rid="tab4">4</xref> show that both existing Algorithms 1 and 2 experience exponential increase in space complexity while only a linear increase with the proposed algorithm. </p>
+      <table-wrap id="tab3">
+        <label>Table 3</label>
+        <caption>
+          <p>Complexities of the proposed algorithm, the existing Algorithm&#x2009;&#x2009;1, and the existing Algorithm&#x2009;&#x2009;2.</p></caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="left">Complexity</th>
+              <th align="center">Existing Algorithm&#x2009;&#x2009;1</th>
+              <th align="center">Existing Algorithm&#x2009;&#x2009;2</th>
+              <th align="center">Proposed Algorithm</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">Time</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M142">
+                    <mml:mrow>
+                      <mml:msup>
+                        <mml:mrow>
+                          <mml:mn mathvariant="normal">2</mml:mn></mml:mrow>
+                        <mml:mrow>
+                          <mml:mi>n</mml:mi></mml:mrow>
+                      </mml:msup></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M143">
+                    <mml:msup>
+                      <mml:mrow>
+                        <mml:mn mathvariant="normal">2</mml:mn></mml:mrow>
+                      <mml:mrow>
+                        <mml:mi>n</mml:mi>
+                        <mml:mo>-</mml:mo>
+                        <mml:mi>m</mml:mi></mml:mrow>
+                    </mml:msup>
+                    <mml:mo>-</mml:mo>
+                    <mml:mi>k</mml:mi></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M144">
+                    <mml:msup>
+                      <mml:mrow>
+                        <mml:mn mathvariant="normal">2</mml:mn></mml:mrow>
+                      <mml:mrow>
+                        <mml:mo stretchy="false">&#x230A;</mml:mo>
+                        <mml:mrow>
+                          <mml:mtext>lo</mml:mtext>
+                          <mml:msub>
+                            <mml:mrow>
+                              <mml:mtext>g</mml:mtext></mml:mrow>
+                            <mml:mrow>
+                              <mml:mtext>2</mml:mtext></mml:mrow>
+                          </mml:msub>
+                          <mml:mi>n</mml:mi></mml:mrow>
+                        <mml:mo stretchy="false">&#x230B;</mml:mo>
+                        <mml:mo>+</mml:mo>
+                        <mml:mn mathvariant="normal">2</mml:mn>
+                        <mml:mo>-</mml:mo>
+                        <mml:mi>m</mml:mi></mml:mrow>
+                    </mml:msup>
+                    <mml:mo>-</mml:mo>
+                    <mml:mi>k</mml:mi></mml:math>
+                </inline-formula></td>
+            </tr>
+            <tr>
+              <td align="left">Space</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M145">
+                    <mml:mrow>
+                      <mml:msup>
+                        <mml:mrow>
+                          <mml:mn mathvariant="normal">2</mml:mn></mml:mrow>
+                        <mml:mrow>
+                          <mml:mi>n</mml:mi></mml:mrow>
+                      </mml:msup></mml:mrow>
+                  </mml:math></inline-formula>
+              </td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M146">
+                    <mml:msup>
+                      <mml:mrow>
+                        <mml:mn mathvariant="normal">2</mml:mn></mml:mrow>
+                      <mml:mrow>
+                        <mml:mi>n</mml:mi>
+                        <mml:mo>-</mml:mo>
+                        <mml:mi>m</mml:mi></mml:mrow>
+                    </mml:msup>
+                    <mml:mo>-</mml:mo>
+                    <mml:mi>k</mml:mi></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M147">
+                    <mml:mi>n</mml:mi>
+                    <mml:mo>-</mml:mo>
+                    <mml:mi>m</mml:mi>
+                    <mml:mo>-</mml:mo>
+                    <mml:msup>
+                      <mml:mrow>
+                        <mml:mi>k</mml:mi></mml:mrow>
+                      <mml:mrow>
+                        <mml:mi>&#x2032;</mml:mi></mml:mrow>
+                    </mml:msup></mml:math>
+                </inline-formula></td>
+            </tr></tbody>
+        </table></table-wrap>
+      <table-wrap id="tab4">
+        <label>Table 4</label>
+        <caption>
+          <p>Comparison among existing Algorithm&#x2009;&#x2009;1, existing Algorithm&#x2009;&#x2009;2, and proposed algorithm in terms of space complexity considering  <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M148"><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:math></inline-formula>,&#x2009;&#x2009; <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M149"><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:math></inline-formula>, and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M150"><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:math></inline-formula>.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="left">No. of sampling points <italic>n  </italic></th>
+              <th align="center">Space complexity for existing Algorithm&#x2009;&#x2009;1</th>
+              <th align="center">Space complexity for existing Algorithm&#x2009;&#x2009;2</th>
+              <th align="center">Space complexity for proposed algorithm</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">50</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M151">
+                    <mml:mn fontstyle="italic">1.13</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M152">
+                    <mml:mn fontstyle="italic">5.6295</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">14</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">48</td></tr>
+            <tr>
+              <td align="left">51</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M153">
+                    <mml:mn fontstyle="italic">2.25</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M154">
+                    <mml:mn fontstyle="italic">1.1259</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">49</td></tr>
+            <tr>
+              <td align="left">52</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M155">
+                    <mml:mn fontstyle="italic">4.5</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M156">
+                    <mml:mn fontstyle="italic">2.2518</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">50</td></tr>
+            <tr>
+              <td align="left">53</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M157">
+                    <mml:mn fontstyle="italic">9.01</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M158">
+                    <mml:mn fontstyle="italic">4.5036</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">51</td></tr>
+            <tr>
+              <td align="left">54</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M159">
+                    <mml:mn fontstyle="italic">1.8</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">16</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M160">
+                    <mml:mn fontstyle="italic">9.0072</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">15</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">52</td></tr>
+            <tr>
+              <td align="left">55</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M161">
+                    <mml:mn fontstyle="italic">3.6</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">16</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M162">
+                    <mml:mn fontstyle="italic">1.80144</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">16</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">53</td></tr>
+            <tr>
+              <td align="left">56</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M163">
+                    <mml:mn fontstyle="italic">7.21</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">16</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M164">
+                    <mml:mn fontstyle="italic">3.60288</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">16</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">54</td></tr>
+            <tr>
+              <td align="left">57</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M165">
+                    <mml:mn fontstyle="italic">1.44</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">17</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M166">
+                    <mml:mn fontstyle="italic">7.20576</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">16</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">55</td></tr>
+            <tr>
+              <td align="left">58</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M167">
+                    <mml:mn fontstyle="italic">2.88</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">17</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M168">
+                    <mml:mn fontstyle="italic">1.44115</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">17</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">56</td></tr>
+            <tr>
+              <td align="left">59</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M169">
+                    <mml:mn fontstyle="italic">5.76</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">17</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M170">
+                    <mml:mn fontstyle="italic">2.8823</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">17</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">57</td></tr>
+            <tr>
+              <td align="left">60</td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M171">
+                    <mml:mn fontstyle="italic">1.15</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">18</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">
+                <inline-formula>
+                  <mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M172">
+                    <mml:mn fontstyle="italic">5.76461</mml:mn>
+                    <mml:mi>E</mml:mi>
+                    <mml:mo>+</mml:mo>
+                    <mml:mn fontstyle="italic">17</mml:mn></mml:math>
+                </inline-formula></td>
+              <td align="center">58</td></tr>
+          </tbody></table>
+      </table-wrap>
+      <fig id="fig4">
+        <label>Figure 4</label>
+        <caption>
+          <p>Comparison among proposed algorithm, existing Algorithm 1, and existing Algorithm 2 in terms of time complexity considering <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M173"><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1</mml:mn></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M174"><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">2</mml:mn></mml:math></inline-formula>.</p>
+        </caption>
+        <graphic xlink:href="509878.fig.004" /></fig>
+      <fig id="fig5">
+        <label>Figure 5</label>
+        <caption>
+          <p>Comparison among proposed algorithm, existing Algorithm 1, and existing Algorithm 2 in terms of space complexity.</p></caption>
+        <graphic xlink:href="509878.fig.005" /></fig>
+      <p>Let the space complexities of the existing Algorithm 1 and the proposed algorithm be <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M175"><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msup></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M176"><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi><mml:mo>-</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup></mml:math></inline-formula>, respectively.</p>
+      <p>Now,
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M177"><mml:mtable><mml:mlabeledtr id="eq10"><mml:mtd><mml:mtext>(10)</mml:mtext></mml:mtd><mml:mtd><mml:mo>&#x2009;</mml:mo><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub><mml:mi>&#x2009;&#x2009;</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mi>n</mml:mi><mml:mo>+</mml:mo><mml:mi>m</mml:mi><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup><mml:mo>&#x2265;</mml:mo><mml:mn mathvariant="normal">0</mml:mn><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula></p>
+      <p>Thus, it can be written that <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M178"><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">1</mml:mn></mml:mrow></mml:msub><mml:mo>&#x2265;</mml:mo><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub></mml:math></inline-formula>, which indicates less space complexity of the proposed algorithm from the existing Algorithm 1. Again suppose that the space complexities of the existing Algorithm 2 and the proposed algorithm are <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M179"><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mi>k</mml:mi></mml:math></inline-formula> and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M180"><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi><mml:mo>-</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup></mml:math></inline-formula>, respectively.</p>
+      <p>Now,
+						<disp-formula><mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M181"><mml:mtable><mml:mlabeledtr id="eq11"><mml:mtd><mml:mtext>(11)</mml:mtext></mml:mtd><mml:mtd><mml:maligngroup /><mml:malignmark /><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mi>k</mml:mi><mml:mo>-</mml:mo><mml:mi>n</mml:mi><mml:mo>+</mml:mo><mml:mi>m</mml:mi><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup><mml:mo linebreak="newline" indentalign="left" /><mml:mphantom><mml:mpadded height="0in" depth="0in"><mml:mrow><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>-</mml:mo><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mpadded></mml:mphantom><mml:mo>&#x2009;</mml:mo><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow><mml:mrow><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:msup><mml:mo>-</mml:mo><mml:mrow><mml:mo class="left">(</mml:mo><mml:mi>n</mml:mi><mml:mo>-</mml:mo><mml:mi>m</mml:mi><mml:mo class="right">)</mml:mo></mml:mrow><mml:mo>-</mml:mo><mml:mrow><mml:mo class="left">(</mml:mo><mml:mi>k</mml:mi><mml:mo>-</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup><mml:mo class="right">)</mml:mo></mml:mrow><mml:mo>&#x2265;</mml:mo><mml:mn mathvariant="normal">0</mml:mn><mml:mo>.</mml:mo></mml:mtd></mml:mlabeledtr></mml:mtable></mml:math></disp-formula></p>
+      <p>Therefore, it can also be written that <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M182"><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:msub><mml:mo>&#x2265;</mml:mo><mml:msub><mml:mrow><mml:mi>S</mml:mi></mml:mrow><mml:mrow><mml:mn mathvariant="normal">3</mml:mn></mml:mrow></mml:msub></mml:math></inline-formula>, which indicates less space complexity of the proposed algorithm from the existing Algorithm 2. Therefore, space complexity of the proposed algorithm is much less than that of both existing Algorithms 1 and 2 that can be best described in a tabular format as in Table <xref ref-type="table" rid="tab4">4</xref>, where the values of <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M183"><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M184"><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:math></inline-formula>, and <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M185"><mml:mrow><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup></mml:mrow></mml:math></inline-formula> are also randomly assigned to 1, 2, and 1, respectively. That is, it has been considered that the number of rejected duplicate patterns is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M186"><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math></inline-formula>, the number of unexplored nodes in the whole search space is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M187"><mml:mi>k</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:math></inline-formula>, and the number of unexplored nodes in a single path of the DFS tree is <inline-formula><mml:math xmlns:mml="http://www.w3.org/1998/Math/MathML" id="M188"><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x2032;</mml:mi></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math></inline-formula>. From Table <xref ref-type="table" rid="tab4">4</xref> and Figure <xref ref-type="fig" rid="fig5">5</xref>, it can be decided that the space complexity of both existing Algorithms 1 and 2 is increasing exponentially while the proposed algorithm is increasing linearly, which indicates an outstanding performance of the proposed algorithm.</p>
+      <p>The comparison based on the computation time among proposed algorithm and existing Algorithms 1 and 2 has been exposed in Table <xref ref-type="table" rid="tab5">5</xref> and the reduction of computation time of the proposed algorithm from existing Algorithms 1 and 2 has been presented as a graphical view for better understanding in Figure <xref ref-type="fig" rid="fig6">6</xref>. Here, 10 different scenarios containing different numbers of sampling points have been considered. The number of transmitters in Table <xref ref-type="table" rid="tab5">5</xref> indicates how many transmitters are involved to cover all the sampling points as well as to remove all the blind spots from the corresponding propagation area. From Table <xref ref-type="table" rid="tab5">5</xref>, it is revealed that the execution time of the proposed algorithm is always much less than both existing Algorithms 1 and 2. It is also established that 75&#x25; reduction of the execution time in average is possible by the proposed algorithm while comparing with the existing Algorithm 2 and above 99&#x25; reduction (in average) is possible while comparing with the existing Algorithm 1.</p>
+      <table-wrap id="tab5">
+        <label>Table 5</label>
+        <caption>
+          <p>Comparison among existing Algorithm&#x2009;&#x2009;1, existing Algorithm&#x2009;&#x2009;2, and proposed algorithm in terms of computation time.</p></caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="left">No. of sampling points</th>
+              <th align="center">No. of transmitters</th>
+              <th align="center">Time for existing Algorithm&#x2009;&#x2009; 1 (seconds)</th>
+              <th align="center">Time for existing Algorithm&#x2009;&#x2009;2 (seconds)</th>
+              <th align="center">Time for proposed algorithm (seconds)</th>
+              <th align="center">Reduction from existing Algorithm&#x2009;&#x2009;2 (&#x25;)</th>
+              <th align="center">Reduction from existing Algorithm&#x2009;&#x2009;1 (&#x25;)</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="left">18</td>
+              <td align="center">2</td>
+              <td align="center">8.06</td>
+              <td align="center">6</td>
+              <td align="center">2.96</td>
+              <td align="center">50.67</td>
+              <td align="center">63.28</td></tr>
+            <tr>
+              <td align="left">20</td>
+              <td align="center">2</td>
+              <td align="center">30.63</td>
+              <td align="center">6.75</td>
+              <td align="center">2.57</td>
+              <td align="center">61.93</td>
+              <td align="center">91.61</td></tr>
+            <tr>
+              <td align="left">22</td>
+              <td align="center">2</td>
+              <td align="center">43.95</td>
+              <td align="center">7.53</td>
+              <td align="center">2.97</td>
+              <td align="center">60.56</td>
+              <td align="center">93.24</td></tr>
+            <tr>
+              <td align="left">25</td>
+              <td align="center">3</td>
+              <td align="center">112.02</td>
+              <td align="center">7.94</td>
+              <td align="center">2.35</td>
+              <td align="center">70.4</td>
+              <td align="center">97.9</td></tr>
+            <tr>
+              <td align="left">27</td>
+              <td align="center">2</td>
+              <td align="center">22.68</td>
+              <td align="center">9.05</td>
+              <td align="center">2.59</td>
+              <td align="center">71.38</td>
+              <td align="center">88.58</td></tr>
+            <tr>
+              <td align="left">30</td>
+              <td align="center">3</td>
+              <td align="center">183.14</td>
+              <td align="center">9.31</td>
+              <td align="center">2.61</td>
+              <td align="center">68.59</td>
+              <td align="center">98.57</td></tr>
+            <tr>
+              <td align="left">32</td>
+              <td align="center">3</td>
+              <td align="center">346.4</td>
+              <td align="center">10.08</td>
+              <td align="center">2.78</td>
+              <td align="center">72.42</td>
+              <td align="center">99.2</td></tr>
+            <tr>
+              <td align="left">35</td>
+              <td align="center">3</td>
+              <td align="center">606.95</td>
+              <td align="center">10.96</td>
+              <td align="center">2.83</td>
+              <td align="center">74.18</td>
+              <td align="center">99.23</td></tr>
+            <tr>
+              <td align="left">37</td>
+              <td align="center">3</td>
+              <td align="center">708.85</td>
+              <td align="center">12</td>
+              <td align="center">2.88</td>
+              <td align="center">76</td>
+              <td align="center">99.3</td></tr>
+            <tr>
+              <td align="left">40</td>
+              <td align="center">3</td>
+              <td align="center">292.09</td>
+              <td align="center">12.22</td>
+              <td align="center">2.96</td>
+              <td align="center">75.78</td>
+              <td align="center">98.99</td></tr>
+          </tbody></table>
+      </table-wrap>
+      <fig id="fig6">
+        <label>Figure 6</label>
+        <caption>
+          <p>Improvement of the proposed algorithm over existing Algorithms 1 and 2.</p></caption>
+        <graphic xlink:href="509878.fig.006" /></fig>
+      <p>In this study, specular reflections and transmissions of waves between the walls and furniture are considered, because the RT model used in this paper is a 2D ray tracer. Indoor measurements are performed at a carrier frequency of 2.4&#x2009;GHz. The transmitter (Tx) used in this experiment is R&#x26;S SMU200A Vector Signal Generator and the receiver (Rx) is R&#x26;S FSV Signal and Spectrum Analyzer. Here, the semispherical antenna is used for both of Tx and Rx to receive the signals from both directions. The obstacles are composed of arbitrary materials. The walls of the room are made of brick. The doors are made of wood and the windows are made of glass. The inside furniture of the room is made of wood and plastic board. There are some partitions that are made of plastic board and glass. Relative permittivity and refractive indexes of different materials (each and every kind of furniture in the building), such as brick, glass, wood, and plastic board in the testing room, are chosen as standard value [<xref ref-type="bibr" rid="B18">18</xref>, <xref ref-type="bibr" rid="B19">19</xref>]. It should be noted here that a highly sophisticated simulation software is developed using Visual Studio 2008 (C# code) in this work that provides a Graphical User Interface (GUI). Therefore, this software will allow customizing the properties and the thicknesses of particular objects by a &#x201c;mouse click&#x201d; operation. In this study, all walls are assumed to have the same thickness and same properties except at locations wherever specified. </p>
+      <p>Besides, the detailed parameters, such as thickness, dielectric constant, and conductivity of particular objects, are taken for the realistic field calculations. When the properties of each object are modified, suppose that permittivity of the wall is changed, then the received signal strength will also change, because the received signal is directly related to the reflection loss, which is related to the permittivity of the materials. On the other hand, when any partition is changed by other materials, for instance, a partition made of brick is changed by the glass sheet, then the overall predicted signal is also changed, which will have an effect on the number of receivers covered by a particular transmitter, which means that the number of blind spots will also be changed. Figure <xref ref-type="fig" rid="fig7">7</xref> shows that the number of blind spots is changed because of changing of material used in the indoor environment.</p>
+      <fig-group id="fig7">
+        <caption>
+          <p>(a) Two blind spots exist in the coverage area when all partition walls to be considered are made of brick. (b) Blind spots are removed when some partitions are replaced by the glass sheet.</p></caption>
+        <fig id="fig7a">
+          <label>(a)</label>
+          <graphic xlink:href="509878.fig.007a" /></fig>
+        <fig id="fig7b">
+          <label>(b)</label>
+          <graphic xlink:href="509878.fig.007b" /></fig></fig-group>
+      <p>In Figure <xref ref-type="fig" rid="fig7a">7(a)</xref>, one transmitter and four receivers are placed in different locations. After rays are launched from the transmitter, two receivers remain uncovered which means that two blind spots exist within the coverage area, because of brick partition used in the dotted squared area. On the other hand, four receivers are covered by the transmitter when the partition walls (that exist in the dotted rectangle as shown in Figure <xref ref-type="fig" rid="fig7b">7(b)</xref>) are replaced by the glass sheet. Therefore, none of the blind spots exits in the coverage area. It can be summarized that when the properties of objects used in the simulation environment are changed, then the coverage pattern of the transmitter also changes. </p>
+      <p>In addition, real measurements of Figure <xref ref-type="fig" rid="fig1">1</xref> are carried out to account for the strength of the signal, because providing coverage with assessing the intensity of the signal is sufficient to claim that there are no blind spots. Bad sampling points are determined as when the received power from any transmitter (Tx) is less than &#x2212;50&#x2009;dB [<xref ref-type="bibr" rid="B3">3</xref>]. Figure <xref ref-type="fig" rid="fig8">8</xref> shows a relationship between the received power and coverage for different number of Tx(s), where the transmitted power is considered as constant and the number of Tx(s) is increased to obtain the maximum coverage. From Figure <xref ref-type="fig" rid="fig8">8</xref>, it is also observed that when there is a single Tx on the environment, it covers a less number of Rx(s). Therefore, the total power also becomes less. For two Tx(s), the number of covered Rx(s) increases, which also increases the received power. For three Tx(s), almost all Rx(s) are covered and, also, the received power is getting higher.</p>
+      <fig-group id="fig8">
+        <caption>
+          <p> Received power versus coverage with (a) 1 Tx, (b) 2 Tx, and (c) 3 Tx.</p></caption>
+        <fig id="fig8a">
+          <label>(a)</label>
+          <graphic xlink:href="509878.fig.008a" /></fig>
+        <fig id="fig8b">
+          <label>(b)</label>
+          <graphic xlink:href="509878.fig.008b" /></fig>
+        <fig id="fig8c">
+          <label>(c)</label>
+          <graphic xlink:href="509878.fig.008c" /></fig></fig-group>
+      <p>According to the indication of the figures, it is clear that the Rx power is coming from all of the used Tx(s). When we use single Tx, the Rx(s) power is from that single transmitter. When there are two Tx(s), it is obvious that the Rx(s) receive power from both of the two Tx(s) and the average of the two received powers has been shown here. In case of three Tx(s), the Rx(s) receive from all three Tx(s) and here, also, the average received power is shown in the figure. During this experiment, the Tx power was kept constant at &#x2212;30&#x2009;dBm. However, this experiment can also be done for any range of Tx power. From Figure <xref ref-type="fig" rid="fig8">8</xref>, it is observed that the percentage of coverage is increasing with the increase in the received power, which guarantees coverage of the receive point (i.e., there are no blind spots). The received power is also increased when the number of Txs is increasing. It is found that, when the number of Txs is 3, the percentage of coverage is almost 99&#x25; (almost all sampling points are covered).</p></sec>
+    <sec id="sec4">
+      <title>4. Conclusion</title>
+      <p>An efficient and novel optimization algorithm of removing blind spots from the indoor area has been proposed in this study. The advantage of the algorithm is that the memory requirement is only linear. This is in contrast to other existing algorithms [<xref ref-type="bibr" rid="B3">3</xref>, <xref ref-type="bibr" rid="B12">12</xref>], which require more space. The reason behind that is that, a stack of nodes on the path from the root to the current node is needed to store by the algorithm. As mentioned earlier, if the proposed algorithm finds the solution without exploring unnecessary nodes in a path, the space and time it takes will be much less. Thus, it has less time and space complexities in average and the more the number of sampling points in the indoor environment, the more the complexity difference between the proposed and the existing algorithms. Thus, it is revealed that the average execution time can be reduced as high as 99&#x25; and 75&#x25;, respectively, because of outstanding bounding functions as well as the concept of binary coverage pattern. Therefore, a conclusion can be drawn that the proposed algorithm excels in both algorithmic complexity and computation time. </p>
+      <p>Conversely, the wireless coverage model by [<xref ref-type="bibr" rid="B3">3</xref>] repeats the ray tracer for every generated chromosome. As a result, there is a high probability of repeating the RT program multiple times for the same transmitter position, which consumes a significant amount of time. The model [<xref ref-type="bibr" rid="B3">3</xref>] also cannot reuse the information of a transmitter location and, therefore, it runs the ray tracer repeatedly. The proposed algorithm does not run the ray tracer more than once for a single transmitting position. The proposed coverage model guarantees the removal of blind spots completely from the indoor area and subsequently continues recursively until it covers all the sampling (receiving) points. Theoretically, the coverage algorithm always covers all the receiving points to offer 100&#x25; coverage. Moreover, the performance and accuracy of the proposed coverage model are verified by making comparisons between simulation results and measured data. It is observed that the percentage of coverage is increasing with the increase in the received power that guarantees coverage of the receiving point. The received power is also increased when the number of transmitters is increasing. Therefore, in terms of measurement results, the percentage of obtaining coverage is 99&#x25; and almost all sampling points are successfully covered in the given area. Hence, the proposed algorithm can be a great competitor of other optimization techniques and the outcome of this study can be easily applied to real system engineering.</p></sec>
+  </body>
+  <back>
+    <ref-list>
+      <ref id="B1" content-type="article">
+        <label>1</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Loo</surname>
+              <given-names>C. H.</given-names></name>
+            <name>
+              <surname>Elsherbeni</surname>
+              <given-names>A. Z.</given-names></name>
+            <name>
+              <surname>Yang</surname>
+              <given-names>F.</given-names></name>
+            <name>
+              <surname>Kajfez</surname>
+              <given-names>D.</given-names></name>
+          </person-group>
+          <article-title>Experimental and simulation investigation of RFID blind spots</article-title>
+          <source>
+            <italic>Journal of Electromagnetic Waves and Applications</italic></source>
+          <year>2009</year>
+          <volume>23</volume>
+          <issue>5</issue>
+          <fpage>747</fpage>
+          <lpage>760</lpage>
+          <pub-id pub-id-type="other">2-s2.0-67649306836</pub-id>
+          <pub-id pub-id-type="doi">10.1163/156939309788019750</pub-id></nlm-citation>
+      </ref>
+      <ref id="B2" content-type="article">
+        <label>2</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Grubisic</surname>
+              <given-names>S.</given-names></name>
+            <name>
+              <surname>Carpes</surname>
+              <given-names>W. P.</given-names></name>
+            <name>
+              <surname>Bastos</surname>
+              <given-names>J. P. A.</given-names></name>
+          </person-group>
+          <article-title>Optimization model for antenna positioning in indoor environments using 2-D ray-tracing technique associated to a real-coded genetic algorithm</article-title>
+          <source>
+            <italic>IEEE Transactions on Magnetics</italic></source>
+          <year>2009</year>
+          <volume>45</volume>
+          <issue>3</issue>
+          <fpage>1626</fpage>
+          <lpage>1629</lpage>
+          <pub-id pub-id-type="other">2-s2.0-61449180349</pub-id>
+          <pub-id pub-id-type="doi">10.1109/TMAG.2009.2012760</pub-id></nlm-citation>
+      </ref>
+      <ref id="B3" content-type="article">
+        <label>3</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Yun</surname>
+              <given-names>Z.</given-names></name>
+            <name>
+              <surname>Lim</surname>
+              <given-names>S.</given-names></name>
+            <name>
+              <surname>Iskander</surname>
+              <given-names>M. F.</given-names></name>
+          </person-group>
+          <article-title>An integrated method of ray tracing and genetic algorithm for optimizing coverage in indoor wireless networks</article-title>
+          <source>
+            <italic>IEEE Antennas and Wireless Propagation Letters</italic></source>
+          <year>2008</year>
+          <volume>7</volume>
+          <fpage>145</fpage>
+          <lpage>148</lpage>
+          <pub-id pub-id-type="other">2-s2.0-76849113901</pub-id>
+          <pub-id pub-id-type="doi">10.1109/LAWP.2008.919358</pub-id></nlm-citation>
+      </ref>
+      <ref id="B4" content-type="article">
+        <label>4</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sarker</surname>
+              <given-names>M. S.</given-names></name>
+            <name>
+              <surname>Reza</surname>
+              <given-names>A. W.</given-names></name>
+            <name>
+              <surname>Dimyati</surname>
+              <given-names>K.</given-names></name>
+          </person-group>
+          <article-title>A novel ray-tracing technique for indoor radio signal prediction</article-title>
+          <source>
+            <italic>Journal of Electromagnetic Waves and Applications</italic></source>
+          <year>2011</year>
+          <volume>25</volume>
+          <issue>8-9</issue>
+          <fpage>1179</fpage>
+          <lpage>1190</lpage>
+          <pub-id pub-id-type="other">2-s2.0-79957590645</pub-id>
+          <pub-id pub-id-type="doi">10.1163/156939311795762222</pub-id></nlm-citation>
+      </ref>
+      <ref id="B5" content-type="article">
+        <label>5</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Takahashi</surname>
+              <given-names>C.</given-names></name>
+            <name>
+              <surname>Yun</surname>
+              <given-names>Z.</given-names></name>
+            <name>
+              <surname>Iskander</surname>
+              <given-names>M. F.</given-names></name>
+            <name>
+              <surname>Poilasne</surname>
+              <given-names>G.</given-names></name>
+            <name>
+              <surname>Pathak</surname>
+              <given-names>V.</given-names></name>
+            <name>
+              <surname>Fabrega</surname>
+              <given-names>J.</given-names></name>
+          </person-group>
+          <article-title>Propagation-prediction and site-planning software for wireless communication systems</article-title>
+          <source>
+            <italic>IEEE Antennas and Propagation Magazine</italic></source>
+          <year>2007</year>
+          <volume>49</volume>
+          <issue>2</issue>
+          <fpage>52</fpage>
+          <lpage>60</lpage>
+          <pub-id pub-id-type="other">2-s2.0-47349117088</pub-id>
+          <pub-id pub-id-type="doi">10.1109/MAP.2007.376643</pub-id></nlm-citation>
+      </ref>
+      <ref id="B6" content-type="article">
+        <label>6</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Reza</surname>
+              <given-names>A. W.</given-names></name>
+            <name>
+              <surname>Dimyati</surname>
+              <given-names>K.</given-names></name>
+            <name>
+              <surname>Noordin</surname>
+              <given-names>K. A.</given-names></name>
+            <name>
+              <surname>Sarker</surname>
+              <given-names>M. S.</given-names></name>
+          </person-group>
+          <article-title>Intelligent ray-tracing: an efficient indoor ray propagation model</article-title>
+          <source>
+            <italic>IEICE Electronics Express</italic></source>
+          <year>2011</year>
+          <volume>8</volume>
+          <issue>22</issue>
+          <fpage>1920</fpage>
+          <lpage>1926</lpage>
+          <pub-id pub-id-type="doi">10.1587/elex.8.1920</pub-id></nlm-citation>
+      </ref>
+      <ref id="B7" content-type="article">
+        <label>7</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tayebi</surname>
+              <given-names>A.</given-names></name>
+            <name>
+              <surname>Gomez</surname>
+              <given-names>J.</given-names></name>
+            <name>
+              <surname>Saez de Adana</surname>
+              <given-names>F.</given-names></name>
+            <name>
+              <surname>Gutierrez</surname>
+              <given-names>O.</given-names></name>
+          </person-group>
+          <article-title>The application of ray-tracing to mobile localization using the direction of arrival and received signal strength in multipath indoor environments</article-title>
+          <source>
+            <italic>Progress in Electromagnetics Research</italic></source>
+          <year>2009</year>
+          <volume>91</volume>
+          <fpage>1</fpage>
+          <lpage>15</lpage>
+          <pub-id pub-id-type="other">2-s2.0-65449134774</pub-id></nlm-citation>
+      </ref>
+      <ref id="B8" content-type="article">
+        <label>8</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Gomez</surname>
+              <given-names>J.</given-names></name>
+            <name>
+              <surname>Tayebi</surname>
+              <given-names>A.</given-names></name>
+            <name>
+              <surname>de Adana</surname>
+              <given-names>F. S.</given-names></name>
+            <name>
+              <surname>Gutierrez</surname>
+              <given-names>O.</given-names></name>
+          </person-group>
+          <article-title>Localization approach based on ray-tracing including the effect of human shadowing</article-title>
+          <source>
+            <italic>Progress In Electromagnetics Research Letters</italic></source>
+          <year>2010</year>
+          <volume>15</volume>
+          <fpage>1</fpage>
+          <lpage>11</lpage>
+          <pub-id pub-id-type="other">2-s2.0-78651229128</pub-id></nlm-citation>
+      </ref>
+      <ref id="B9" content-type="article">
+        <label>9</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Tao</surname>
+              <given-names>Y. B.</given-names></name>
+            <name>
+              <surname>Lin</surname>
+              <given-names>H.</given-names></name>
+            <name>
+              <surname>Bao</surname>
+              <given-names>H. J.</given-names></name>
+          </person-group>
+          <article-title>KD-tree based fast ray tracing for RCS prediction</article-title>
+          <source>
+            <italic>Progress in Electromagnetics Research</italic></source>
+          <year>2008</year>
+          <volume>81</volume>
+          <fpage>329</fpage>
+          <lpage>341</lpage>
+          <pub-id pub-id-type="other">2-s2.0-43749108396</pub-id></nlm-citation>
+      </ref>
+      <ref id="B10" content-type="article">
+        <label>10</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Saez de Adana</surname>
+              <given-names>F.</given-names></name>
+            <name>
+              <surname>Guti&#xe9;rrez</surname>
+              <given-names>O.</given-names></name>
+            <name>
+              <surname>Navarro</surname>
+              <given-names>M. A.</given-names></name>
+            <name>
+              <surname>Mohan</surname>
+              <given-names>A. S.</given-names></name>
+          </person-group>
+          <article-title>Efficient time-domain ray-tracing technique for the analysis of ultra-wideband indoor environments including Lossy materials and multiple effects</article-title>
+          <source>
+            <italic>International Journal of Antennas and Propagation</italic></source>
+          <year>2009</year>
+          <volume>2009</volume>
+          <lpage>8</lpage>
+          <pub-id pub-id-type="publisher-id">390782</pub-id>
+          <pub-id pub-id-type="doi">10.1155/2009/390782</pub-id></nlm-citation>
+      </ref>
+      <ref id="B11" content-type="article">
+        <label>11</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Li&#xe8;be</surname>
+              <given-names>C.</given-names></name>
+            <name>
+              <surname>Combeau</surname>
+              <given-names>P.</given-names></name>
+            <name>
+              <surname>Gaugue</surname>
+              <given-names>A.</given-names></name>
+            <name>
+              <surname>Pousset</surname>
+              <given-names>Y.</given-names></name>
+            <name>
+              <surname>Aveneau</surname>
+              <given-names>L.</given-names></name>
+            <name>
+              <surname>Vauzelle</surname>
+              <given-names>R.</given-names></name>
+            <name>
+              <surname>Ogier</surname>
+              <given-names>J. M.</given-names></name>
+          </person-group>
+          <article-title>Ultra-wideband indoor channel modelling using ray-tracing software for through-the-wall imaging radar</article-title>
+          <source>
+            <italic>International Journal of Antennas and Propagation</italic></source>
+          <year>2010</year>
+          <volume>2010</volume>
+          <lpage>14</lpage>
+          <pub-id pub-id-type="other">2-s2.0-78651575620</pub-id>
+          <pub-id pub-id-type="doi">10.1155/2010/934602</pub-id>
+          <pub-id pub-id-type="publisher-id">934602</pub-id></nlm-citation>
+      </ref>
+      <ref id="B12" content-type="article">
+        <label>12</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Reza</surname>
+              <given-names>A. W.</given-names></name>
+            <name>
+              <surname>Sarker</surname>
+              <given-names>M. S.</given-names></name>
+            <name>
+              <surname>Dimyati</surname>
+              <given-names>K.</given-names></name>
+          </person-group>
+          <article-title>A novel integrated mathematical approach of ray-tracing and genetic algorithm for optimizing indoor wireless coverage</article-title>
+          <source>
+            <italic>Progress in Electromagnetics Research</italic></source>
+          <year>2010</year>
+          <volume>110</volume>
+          <fpage>147</fpage>
+          <lpage>162</lpage>
+          <pub-id pub-id-type="other">2-s2.0-78651235752</pub-id></nlm-citation>
+      </ref>
+      <ref id="B13" content-type="article">
+        <label>13</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Agastra</surname>
+              <given-names>E.</given-names></name>
+            <name>
+              <surname>Bellaveglia</surname>
+              <given-names>G.</given-names></name>
+            <name>
+              <surname>Lucci</surname>
+              <given-names>L.</given-names></name>
+            <name>
+              <surname>Nesti</surname>
+              <given-names>R.</given-names></name>
+            <name>
+              <surname>Pelosi</surname>
+              <given-names>G.</given-names></name>
+            <name>
+              <surname>Ruggerini</surname>
+              <given-names>G.</given-names></name>
+            <name>
+              <surname>Selleri</surname>
+              <given-names>S.</given-names></name>
+          </person-group>
+          <article-title>Genetic algorithm optimization of high-efficiency wide-band multimodal square horns for discrete lenses</article-title>
+          <source>
+            <italic>Progress in Electromagnetics Research</italic></source>
+          <year>2008</year>
+          <volume>83</volume>
+          <fpage>335</fpage>
+          <lpage>352</lpage>
+          <pub-id pub-id-type="other">2-s2.0-49549113834</pub-id></nlm-citation>
+      </ref>
+      <ref id="B14" content-type="article">
+        <label>14</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Meng</surname>
+              <given-names>Z.</given-names></name>
+          </person-group>
+          <article-title>Autonomous genetic algorithm for functional optimization</article-title>
+          <source>
+            <italic>Progress in Electromagnetics Research</italic></source>
+          <year>2007</year>
+          <volume>72</volume>
+          <fpage>253</fpage>
+          <lpage>268</lpage>
+          <pub-id pub-id-type="doi">10.2528/PIER07031506</pub-id></nlm-citation>
+      </ref>
+      <ref id="B15" content-type="book">
+        <label>15</label>
+        <nlm-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rahmat-Samii</surname>
+              <given-names>Y.</given-names></name>
+            <name>
+              <surname>Michielssen</surname>
+              <given-names>E.</given-names></name>
+          </person-group>
+          <source>
+            <italic>Electromagnetic Optimization by Genetic Algorithms</italic></source>
+          <year>1999</year>
+          <publisher-loc>New York, NY, USA</publisher-loc>
+          <publisher-name>Wiley-Interscience</publisher-name></nlm-citation>
+      </ref>
+      <ref id="B16" content-type="article">
+        <label>16</label>
+        <nlm-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Reza</surname>
+              <given-names>A. W.</given-names></name>
+            <name>
+              <surname>Dimyati</surname>
+              <given-names>K.</given-names></name>
+            <name>
+              <surname>Noordin</surname>
+              <given-names>K. A.</given-names></name>
+            <name>
+              <surname>Kausar</surname>
+              <given-names>A. S. M. Z.</given-names></name>
+            <name>
+              <surname>Sarker</surname>
+              <given-names>M. S.</given-names></name>
+          </person-group>
+          <article-title>A comprehensive study of optimization algorithm for wireless coverage in indoor area</article-title>
+          <source>
+            <italic>Optimization Letters</italic></source>
+          <year>2012</year>
+          <pub-id pub-id-type="doi">10.1007/s11590-012-0543-z</pub-id></nlm-citation>
+      </ref>
+      <ref id="B17" content-type="book">
+        <label>17</label>
+        <nlm-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Knuth</surname>
+              <given-names>D. E.</given-names></name>
+          </person-group>
+          <source>
+            <italic>The Art of Computer Programming</italic></source>
+          <year>1997</year>
+          <volume>1</volume>
+          <edition>3rd</edition>
+          <publisher-loc>Boston, Mass, USA</publisher-loc>
+          <publisher-name>Addison-Wesley</publisher-name></nlm-citation>
+      </ref>
+      <ref id="B18" content-type="book">
+        <label>18</label>
+        <nlm-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dobkin</surname>
+              <given-names>D. M.</given-names></name>
+          </person-group>
+          <source>
+            <italic>RF Engineering for Wireless Networks: Hardware, Antennas, and Propagation</italic></source>
+          <year>2005</year>
+          <publisher-loc>Amsterdam, The Netherlands</publisher-loc>
+          <publisher-name>Elsevier/Newnes</publisher-name></nlm-citation>
+      </ref>
+      <ref id="B19" content-type="book">
+        <label>19</label>
+        <nlm-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rappaport</surname>
+              <given-names>T. S.</given-names></name>
+          </person-group>
+          <source>
+            <italic>Wireless Communication Principles and Practice</italic></source>
+          <year>2002</year>
+          <publisher-loc>Upper Saddle River, NJ, USA</publisher-loc>
+          <publisher-name>Prentice Hall</publisher-name>
+          <series>Communications Engineering and Emerging Technology</series></nlm-citation>
+      </ref></ref-list>
+  </back></article>

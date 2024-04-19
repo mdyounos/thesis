@@ -1,0 +1,21 @@
+TY  - JOUR
+A2  - Selleri, Stefano
+AU  - Reza, A. W.
+AU  - Dimyati, K.
+AU  - Noordin, K. A.
+AU  - Islam, M. J.
+AU  - Sarker, M. S.
+AU  - Ramiah, H.
+PY  - 2013
+DA  - 2013/04/18
+TI  - A New Technique of Removing Blind Spots to Optimize Wireless Coverage in Indoor Area
+SP  - 509878
+VL  - 2013
+AB  - Blind spots (or bad sampling points) in indoor areas are the positions where no signal exists (or the signal is too weak) and the existence of a receiver within the blind spot decelerates the performance of the communication system. Therefore, it is one of the fundamental requirements to eliminate the blind spots from the indoor area and obtain the maximum coverage while designing the wireless networks. In this regard, this paper combines ray-tracing (RT), genetic algorithm (GA), depth first search (DFS), and branch-and-bound method as a new technique that guarantees the removal of blind spots and subsequently determines the optimal wireless coverage using minimum number of transmitters. The proposed system outperforms the existing techniques in terms of algorithmic complexity and demonstrates that the computation time can be reduced as high as 99&#x25; and 75&#x25;, respectively, as compared to existing algorithms. Moreover, in terms of experimental analysis, the coverage prediction successfully reaches 99&#x25; and, thus, the proposed coverage model effectively guarantees the removal of blind spots.
+SN  - 1687-5869
+UR  - https://doi.org/10.1155/2013/509878
+DO  - 10.1155/2013/509878
+JF  - International Journal of Antennas and Propagation
+PB  - Hindawi Publishing Corporation
+KW  - 
+ER  - 
