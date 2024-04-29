@@ -1,201 +1,143 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
-const int MAX_VERTICES = 100;
-const int POPULATION_SIZE = 50;
-const int MAX_ITERATIONS = 100;
-const double INERTIA_WEIGHT = 0.7;
-const double C1 = 1.5; // Cognitive coefficient
-const double C2 = 1.5; // Social coefficient
-const double THRESHOLD = 0.5;
+// Define the graph structure
+struct Graph{
+    int numVertices;
+    vector<vector<int>> adjacencyMatrix;
+};
 
+// Define the particle structure
 struct Particle {
-    vector<int> position; // Binary representation (0 or 1)
-    vector<double> velocity;
-    vector<int> personal_best;
-    int personal_best_fitness;
-    int fitness; // Add fitness member here
+    vector<int> position; // Binary encoding of colors for each vertex
+    vector<int> velocity;
+    vector<int> personalBest; // Personal best position found by the particle
+    int fitness; // Fitness value of the personal best position
 
-    Particle() {
-        personal_best_fitness = INT_MAX;
-        fitness = INT_MAX; // Initialize fitness to a high value
+    Particle(int numVertices, int numColors) {
+        position.resize(numVertices);
+        velocity.resize(numVertices);
+        personalBest.resize(numVertices);
+        for (int i = 0; i < numVertices; ++i) {
+            position[i] = rand() % numColors; // Random initialization of colors
+            velocity[i] = rand() % 2; // Random initialization of velocity
+            personalBest[i] = position[i];
+        }
+        fitness = INT_MAX; // Initialize fitness to maximum
     }
 };
 
-
-void initializeSwarm() {
-    swarm.resize(POPULATION_SIZE);
-    for (int i = 0; i < POPULATION_SIZE; ++i) {
-        swarm[i].position.resize(vertices);
-        swarm[i].velocity.resize(vertices);
-
-        // Initialize position and velocity
-        for (int j = 0; j < vertices; ++j) {
-            // Random binary position
-            swarm[i].position[j] = rand() % 2;
-
-            // Random velocity between -1 and 1
-            swarm[i].velocity[j] = (rand() / static_cast<double>(RAND_MAX)) * 2 - 1;
+// Fitness function: Evaluates the quality of a coloring
+int fitnessFunction(const Graph& graph, const vector<int>& coloring) {
+    int conflicts = 0;
+    for (int i = 0; i < graph.numVertices; ++i) {
+        for (int j = i + 1; j < graph.numVertices; ++j) {
+            if (graph.adjacencyMatrix[i][j] && coloring[i] == coloring[j]) {
+                conflicts++;
+            }
         }
+    }
+    return conflicts;
+}
 
-        calculateFitness(swarm[i]);
-        // Initialize fitness
-        swarm[i].fitness = swarm[i].personal_best_fitness;
-        // Update personal best
-        swarm[i].personal_best = swarm[i].position;
-        swarm[i].personal_best_fitness = swarm[i].fitness;
+// Update particle velocity
+void updateVelocity(Particle& particle, const vector<int>& globalBest) {
+    // Define inertia weight and acceleration constants
+    double inertiaWeight = 0.9;
+    double cognitiveAcceleration = 2.0;
+    double socialAcceleration = 2.0;
 
-        // Update global best
-        if (swarm[i].personal_best_fitness < global_best_fitness) {
-            global_best = swarm[i].personal_best;
-            global_best_fitness = swarm[i].personal_best_fitness;
+    // Update velocity for each dimension
+    for (size_t i = 0; i < particle.velocity.size(); ++i) {
+        // Calculate cognitive and social components
+        double cognitiveComponent = cognitiveAcceleration * (rand() / (RAND_MAX + 1.0)) * (particle.personalBest[i] - particle.position[i]);
+        double socialComponent = socialAcceleration * (rand() / (RAND_MAX + 1.0)) * (globalBest[i] - particle.position[i]);
+
+        // Update velocity
+        particle.velocity[i] = inertiaWeight * particle.velocity[i] + cognitiveComponent + socialComponent;
+
+        // Ensure velocity remains within range (0 or 1 for binary representation)
+        //particle.velocity[i] = max(0.0, min(1.0, particle.velocity[i]));
+        particle.velocity[i] = max(0, min(1, particle.velocity[i])); // Ensure velocity remains either 0 or 1
+
+    }
+}
+
+// Update particle position
+void updatePosition(Particle& particle) {
+    // Update position for each dimension
+    for (size_t i = 0; i < particle.position.size(); ++i) {
+        // Update position based on velocity (binary representation)
+        if ((rand() / (RAND_MAX + 1.0)) < particle.velocity[i]) {
+            particle.position[i] = 1 - particle.position[i]; // Flip the bit with a probability based on velocity
         }
     }
 }
 
 
+// BPSO algorithm
+void BPSO(Graph& graph, int numColors, int numParticles, int maxIterations) {
+    vector<Particle> particles;
 
-class BPSO {
-private:
-    int vertices;
-    vector<vector<int>> adjacencyMatrix;
-
-    struct Particle {
-        vector<int> position; // Binary representation (0 or 1)
-        vector<double> velocity;
-        vector<int> personal_best;
-        int personal_best_fitness;
-
-        Particle() {
-            personal_best_fitness = INT_MAX;
-        }
-    };
-
-    vector<Particle> swarm;
-    vector<int> global_best;
-    int global_best_fitness;
-
-public:
-    BPSO(int v): vertices(v) {
-        adjacencyMatrix.resize(vertices, vector<int>(vertices, 0));
-        global_best_fitness = INT_MAX;
+    // Initialize particles
+    for (int i = 0; i < numParticles; ++i) {
+        particles.push_back(Particle(graph.numVertices, numColors));
     }
 
-    void addEdge(int v, int w) {
-        adjacencyMatrix[v][w] = 1;
-        adjacencyMatrix[w][v] = 1;
-    }
+    vector<int> globalBestPosition(graph.numVertices);
+    int globalBestFitness = INT_MAX;
 
-    void initializeSwarm() {
-        swarm.resize(POPULATION_SIZE);
-        for (int i = 0; i < POPULATION_SIZE; ++i) {
-            swarm[i].position.resize(vertices);
-            swarm[i].velocity.resize(vertices);
-
-            // Initialize position and velocity
-            for (int j = 0; j < vertices; ++j) {
-                // Random binary position
-                swarm[i].position[j] = rand() % 2;
-
-                // Random velocity between -1 and 1
-                swarm[i].velocity[j] = (rand() / static_cast<double>(RAND_MAX)) * 2 - 1;
+    // Main loop
+    for (int iter = 0; iter < maxIterations; ++iter) {
+        // Update personal and global best
+        for (auto& particle : particles) {
+            particle.fitness = fitnessFunction(graph, particle.position);
+            if (particle.fitness < fitnessFunction(graph, particle.personalBest)) {
+                particle.personalBest = particle.position;
             }
-
-            calculateFitness(swarm[i]);
-            // Update personal best
-            swarm[i].personal_best = swarm[i].position;
-            swarm[i].personal_best_fitness = swarm[i].fitness;
-
-            // Update global best
-            if (swarm[i].personal_best_fitness < global_best_fitness) {
-                global_best = swarm[i].personal_best;
-                global_best_fitness = swarm[i].personal_best_fitness;
+            if (particle.fitness < globalBestFitness) {
+                globalBestPosition = particle.position;
+                globalBestFitness = particle.fitness;
             }
         }
-    }
 
-    void calculateFitness(Particle &particle) {
-        particle.fitness = 0;
-
-        for (int i = 0; i < vertices; ++i) {
-            for (int j = 0; j < vertices; ++j) {
-                if (adjacencyMatrix[i][j] && particle.position[i] == particle.position[j]) {
-                    // If two adjacent vertices have the same color, increase fitness
-                    particle.fitness++;
-                }
-            }
+        // Update velocities and positions
+        for (auto& particle : particles) {
+            updateVelocity(particle, globalBestPosition);
+            updatePosition(particle);
         }
+
+        // Output intermediate results (optional)
+        cout << "Iteration: " << iter + 1 << ", Fitness: " << globalBestFitness << endl;
     }
 
-    void updateVelocityAndPosition(Particle &particle) {
-        for (int i = 0; i < vertices; ++i) {
-            // Update velocity using the BPSO formula
-            double r1 = static_cast<double>(rand()) / RAND_MAX;
-            double r2 = static_cast<double>(rand()) / RAND_MAX;
-
-            particle.velocity[i] = INERTIA_WEIGHT * particle.velocity[i]
-                                + C1 * r1 * (particle.personal_best[i] - particle.position[i])
-                                + C2 * r2 * (global_best[i] - particle.position[i]);
-
-            // Update position using sigmoid function and threshold
-            double sigmoid = 1 / (1 + exp(-particle.velocity[i]));
-            if (sigmoid > THRESHOLD) {
-                particle.position[i] = 1;
-            } else {
-                particle.position[i] = 0;
-            }
-        }
+    // Output the best solution found
+    cout << "Best coloring found: ";
+    for(int i = 0; i < graph.numVertices; ++i) {
+        cout << globalBestPosition[i] << " ";
     }
-
-    void optimize() {
-        for (int iteration = 0; iteration < MAX_ITERATIONS; ++iteration) {
-            // Update the swarm
-            for (int i = 0; i < POPULATION_SIZE; ++i) {
-                updateVelocityAndPosition(swarm[i]);
-                calculateFitness(swarm[i]);
-
-                // Update personal best
-                if (swarm[i].fitness < swarm[i].personal_best_fitness) {
-                    swarm[i].personal_best = swarm[i].position;
-                    swarm[i].personal_best_fitness = swarm[i].fitness;
-
-                    // Update global best
-                    if (swarm[i].personal_best_fitness < global_best_fitness) {
-                        global_best = swarm[i].personal_best;
-                        global_best_fitness = swarm[i].personal_best_fitness;
-                    }
-                }
-            }
-
-            // Print the best solution of each iteration
-            cout << "Iteration " << iteration + 1 << ", Best Fitness: " << global_best_fitness << endl;
-            printSolution(global_best);
-        }
-    }
-
-    void printSolution(const vector<int> &solution) {
-        cout << "Vertex\tColor\n";
-        for (int i = 0; i < vertices; ++i) {
-            cout << i << "\t" << solution[i] << endl;
-        }
-        cout << endl;
-    }
-};
+    cout << endl;
+    cout << "Fitness: " << globalBestFitness << endl;
+}
 
 int main() {
-    srand(static_cast<int>(time(nullptr)));
+    // Define a simple graph (adjacency matrix representation)
+    Graph graph;
+    graph.numVertices = 5;
+    graph.adjacencyMatrix = {
+        {0, 1, 1, 0, 1},
+        {1, 0, 1, 1, 0},
+        {1, 1, 0, 1, 0},
+        {0, 1, 1, 0, 1},
+        {1, 0, 0, 1, 0}
+    };
 
-    // Example usage
-    BPSO graph(5);
-    graph.addEdge(0, 1);
-    graph.addEdge(0, 2);
-    graph.addEdge(1, 2);
-    graph.addEdge(1, 3);
-    graph.addEdge(3, 4);
+    int numColors = 3; // Number of colors available
+    int numParticles = 50; // Number of particles in the swarm
+    int maxIterations = 100; // Maximum number of iterations
 
-    cout << "Graph Coloring using Binary Particle Swarm Optimization:\n";
-    graph.initializeSwarm();
-    graph.optimize();
+    // Run BPSO algorithm
+    BPSO(graph, numColors, numParticles, maxIterations);
 
     return 0;
 }
